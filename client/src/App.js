@@ -1,23 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Signup from "./components/Auth/Signup";
+import Login from "./components/Auth/Login";
+import Home from "./components/Home/Home";
+ 
+import ProtectedPage from "./MainComponents/Protectedpage";
+import ProductInfo from "./components/Home/ProductInfo";
+
+import Admin from "./components/Admin";
+
+import Profile from "./components/Profile";
+
+import HomeSec from "./components/SecHome/HomeSec";
+import Campaign from "./Campaign";
+import DonarList from "./components/DonarList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+         
+          <Route path="/product/:id" element={<ProductInfo />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Signup />} />
+          <Route path="/donars" element={<DonarList />} />
+          <Route path="/campaign" element={<Campaign />} />
+          <Route
+            path="/home"
+            element={
+              <ProtectedPage>
+                <HomeSec />
+              </ProtectedPage>
+            }
+          />
+
+          <Route
+            path="/profile"
+            element={
+              <ProtectedPage>
+                <Profile />
+              </ProtectedPage>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedPage>
+                <Admin />
+              </ProtectedPage>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
