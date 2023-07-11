@@ -27,7 +27,7 @@ function NavSec() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
   };
 
   if (!user) {
@@ -36,7 +36,7 @@ function NavSec() {
 
   return (
     <>
-      <nav className="p-4 bg-white text-white w-full sticky top-0 shadow-md">
+      <nav className="p-1 bg-white text-white w-full sticky top-0 shadow-md">
         <div className="flex justify-between items-center">
           <div className="flex items-center pl-8">
             <div className="fst-italic fs-2">

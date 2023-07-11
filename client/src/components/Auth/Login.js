@@ -37,6 +37,9 @@ function Login() {
     }
   };
 
+  const gotoHomme = () => {
+    navigate("/");
+  };
   useEffect(() => {
     if (localStorage.getItem("token")) {
       navigate("/home");
@@ -61,10 +64,10 @@ function Login() {
           <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] ">
             <div className="flex h-full items-center justify-center">
             <div className="h-screen    flex justify-center items-center rounded   " >
+            
       <div className=" bg-white p-5 rounded w-[550px]  border border-dark  border-5">
+      
         <h2 className=" text-center text-black"> Sign in</h2>
-         
-        
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item label="Email" name="email" rules={rules}>
             <Input placeholder="Email" />
