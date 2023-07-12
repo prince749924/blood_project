@@ -1,8 +1,12 @@
 import React from 'react'
+import NavSec from '../components/SecHome/NavSec'
 
 function Campaign () {
   return (
+    
     <>
+    <NavSec/>
+   
     <section className="mt-3">
 <div className='container'>
  

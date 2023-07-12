@@ -23,7 +23,7 @@ function Profile() {
           <Tabs.TabPane tab="Profile" key="4">
             <div className="container border border-dark rounded">
               <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-12">
                   <h1>
                     Hi, <span className="text-danger">{user.name}</span>
                   </h1>
@@ -35,29 +35,11 @@ function Profile() {
                   <h4>Email: {user.email}</h4>
                   <h4>Address: {user.address}</h4>
                   <h4>Phone: {user.phone}</h4>
-                  <p className="fs-3 mt-2"> Customize your profile page Here</p>
-                  <a
-                    href="/"
-                    className="btn btn-dark  ms-2 fw-bold fs-5 "
-                    type="submit"
-                  >
-                    Update
-                  </a>
-                  <a
-                    href="/"
-                    className="btn btn-dark  ms-2 fw-bold fs-5 "
-                    type="submit"
-                  >
-                    Upload Image
-                  </a>
+                  
+                   
+                  
                 </div>
-                <div className="col-md-4">
-                  <img
-                    src="https://www.pngmart.com/files/22/User-Avatar-Profile-PNG.png"
-                    style={{ width: "20rem", height: "20rem" }}
-                    alt=""
-                  />
-                </div>
+                 
               </div>
             </div>
           </Tabs.TabPane>
