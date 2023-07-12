@@ -29,12 +29,20 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Signup />} />
           <Route path="/donars" element={<DonarList />} />
-          <Route path="/campaign" element={<Campaign />} />
+         
           <Route
             path="/home"
             element={
               <ProtectedPage>
                 <HomeSec />
+              </ProtectedPage>
+            }
+          />
+          <Route
+            path="/campaign"
+            element={
+              <ProtectedPage>
+                <Campaign />
               </ProtectedPage>
             }
           />
